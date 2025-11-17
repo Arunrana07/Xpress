@@ -2,7 +2,7 @@
   "name": "newsapp",
   "version": "0.1.0",
   "private": true,
- "homepage": "https://Arunrana07.github.io/Xpress",
+ "homepage": "https://github.com/Arunrana07/Xpress.git",
 
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
