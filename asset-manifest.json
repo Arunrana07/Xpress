@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Arunrana07/Xpress.git/static/css/main.f855e6bc.css",
+    "main.js": "/Arunrana07/Xpress.git/static/js/main.bfabe293.js",
+    "static/js/453.91e35c1c.chunk.js": "/Arunrana07/Xpress.git/static/js/453.91e35c1c.chunk.js",
+    "index.html": "/Arunrana07/Xpress.git/index.html",
+    "main.f855e6bc.css.map": "/Arunrana07/Xpress.git/static/css/main.f855e6bc.css.map",
+    "main.bfabe293.js.map": "/Arunrana07/Xpress.git/static/js/main.bfabe293.js.map",
+    "453.91e35c1c.chunk.js.map": "/Arunrana07/Xpress.git/static/js/453.91e35c1c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.bfabe293.js"
+  ]
+}
