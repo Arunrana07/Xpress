@@ -1,0 +1,110 @@
+{
+  "status": "ok",
+  "totalResults": 8,
+  "articles": [
+    {
+      "source": {
+        "id": "abc-news",
+        "name": "ABC News"
+      },
+      "author": "Doc Louallen, Jack Moore",
+      "title": "Powerball jackpot climbs as no ticket matches all numbers",
+      "description": "No winner in the latest draw pushed the jackpot above one billion dollars.",
+      "url": "https://abcnews.go.com/US/powerball-jackpot-hits-1b-labor-day-weekend-drawing/story?id=125093104",
+      "urlToImage": "https://i.abcnewsfe.com/a/06d399ba-49fb-4563-b190-a66ab19ee1da/powerball-jackpot-sign-ap-jt-250829_1756505860337_hpMain_16x9.jpg?w=1600",
+      "publishedAt": "2025-08-31T03:11:59Z",
+      "content": "Lottery officials said the jackpot is now one of the largest in game history."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "KSL.com"
+      },
+      "author": "Tim Vandenack",
+      "title": "Utah violinist detention by immigration officers draws backlash",
+      "description": "Supporters criticized federal action and called for his release.",
+      "url": "https://www.ksl.com/article/51367148/way-too-much-utah-violinists-detention-by-immigration-officials-sparks-backlash-from-backers",
+      "urlToImage": "https://img.ksl.com/slc/3107/310787/31078713.jpeg?filter=kslv2/responsive_story_lg",
+      "publishedAt": "2025-08-31T03:06:12Z",
+      "content": "Community leaders said this is a misuse of immigration enforcement resources."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Austin American-Statesman"
+      },
+      "author": "Thomas Jones, David Eckert",
+      "title": "Texas football staff takeaways after loss to Ohio State",
+      "description": "Analysts reviewed red-zone execution and quarterback play after the defeat.",
+      "url": "https://www.statesman.com/sports/college/longhorns/football/article/texas-vs-ohio-state-takeaways-21023337.php",
+      "urlToImage": "https://s.hdnux.com/photos/01/54/33/05/28422527/3/rawImage.jpg",
+      "publishedAt": "2025-08-31T02:48:45Z",
+      "content": "The game featured late momentum swings and defensive breakdowns."
+    },
+    {
+      "source": {
+        "id": "the-washington-post",
+        "name": "The Washington Post"
+      },
+      "author": "Jacob Bogage, Emily Davies",
+      "title": "Court ruling threatens major tariff strategy at White House",
+      "description": "An appellate decision may weaken the administration's trade leverage.",
+      "url": "https://www.washingtonpost.com/politics/2025/08/30/trump-tariff-policy-in-jeopardy/",
+      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NUZO3AUVIF6PFKZT3CI5ABGR7Q.JPG&w=1440",
+      "publishedAt": "2025-08-31T00:12:03Z",
+      "content": "The administration has used tariff threats in global negotiations."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "TechWire"
+      },
+      "author": "Staff Reporter",
+      "title": "Nvidia and major cloud companies expand AI infrastructure spending",
+      "description": "Tech companies increased investment in chips, data centers and AI software.",
+      "url": "https://example.com/tech-ai-infrastructure",
+      "urlToImage": "https://placehold.co/1200x675?text=Tech+News",
+      "publishedAt": "2025-08-30T18:20:00Z",
+      "content": "Nvidia, Microsoft and other tech leaders signaled higher AI capex for next quarter."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Global Politics Desk"
+      },
+      "author": "Political Correspondent",
+      "title": "Election campaign enters final week as voter turnout debate grows",
+      "description": "Parties shifted strategy toward undecided voters and absentee ballots.",
+      "url": "https://example.com/election-campaign-final-week",
+      "urlToImage": "https://placehold.co/1200x675?text=Vote+News",
+      "publishedAt": "2025-08-30T14:05:00Z",
+      "content": "Polling agencies reported movement among first-time voters before election day."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Market Brief"
+      },
+      "author": "Business Desk",
+      "title": "Semiconductor stocks rise as AI demand remains strong",
+      "description": "Chip makers gained after enterprise demand for accelerators beat forecasts.",
+      "url": "https://example.com/semiconductor-stocks-ai-demand",
+      "urlToImage": "https://placehold.co/1200x675?text=Market+News",
+      "publishedAt": "2025-08-30T11:30:00Z",
+      "content": "Analysts raised price targets for several technology companies."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Civic Times"
+      },
+      "author": "National Bureau",
+      "title": "Ballot counting rules updated ahead of major vote",
+      "description": "Officials said the updated process is intended to improve election transparency.",
+      "url": "https://example.com/ballot-counting-rules-updated",
+      "urlToImage": "https://placehold.co/1200x675?text=Civic+News",
+      "publishedAt": "2025-08-29T20:15:00Z",
+      "content": "The election commission published revised counting guidance for all districts."
+    }
+  ]
+}
