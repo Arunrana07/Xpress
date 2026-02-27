@@ -15,16 +15,21 @@ class News extends Component {
   }
 
   async componentDidMount() {
-    this.fetchNews();
+    this.fetchNews("", 1);
   }
 
   // Fetch news (top headlines or search)
-  fetchNews = async (query = "") => {
+  fetchNews = async (query = this.state.query, page = this.state.page) => {
+    const normalizedQuery = query.trim();
+    const currentPage = normalizedQuery ? page : page || 1;
+
     this.setState({ loading: true });
 
-    const url = query
-      ? `https://newsapi.org/v2/everything?q=${query}&apiKey=b8eef6d1caf845fd841a556284da658e&page=1&pageSize=20`
-      : `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b8eef6d1caf845fd841a556284da658e&page=${this.state.page}&pageSize=20`;
+    const url = normalizedQuery
+      ? `https://newsapi.org/v2/everything?q=${encodeURIComponent(
+          normalizedQuery
+        )}&searchIn=title,description&language=en&sortBy=relevancy&apiKey=b8eef6d1caf845fd841a556284da658e&page=${currentPage}&pageSize=20`
+      : `https://newsapi.org/v2/top-headlines?country=us&category=business&language=en&apiKey=b8eef6d1caf845fd841a556284da658e&page=${currentPage}&pageSize=20`;
 
     const data = await fetch(url);
     const parsedData = await data.json();
@@ -38,28 +43,25 @@ class News extends Component {
       articles: cleanedArticles,
       totalResults: parsedData.totalResults || 0,
       loading: false,
-      query,
-      page: query ? 1 : this.state.page, // reset page to 1 for new search
+      query: normalizedQuery,
+      page: currentPage,
     });
   };
 
   handleSearch = (query) => {
-    this.fetchNews(query);
+    this.fetchNews(query, 1);
   };
 
   handlePrevClick = async () => {
-    this.setState(
-      { page: this.state.page - 1 },
-      () => this.fetchNews(this.state.query)
-    );
+    const previousPage = this.state.page - 1;
+    if (previousPage < 1) return;
+    this.fetchNews(this.state.query, previousPage);
   };
 
   handleNextClick = async () => {
-    if (this.state.page + 1 > Math.ceil(this.state.totalResults / 20)) return;
-    this.setState(
-      { page: this.state.page + 1 },
-      () => this.fetchNews(this.state.query)
-    );
+    const nextPage = this.state.page + 1;
+    if (nextPage > Math.ceil(this.state.totalResults / 20)) return;
+    this.fetchNews(this.state.query, nextPage);
   };
 
   render() {
