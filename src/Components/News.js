@@ -12,6 +12,7 @@ class News extends Component {
       totalResults: 0,
       query: "", // Current search term
     };
+    this.activeRequestId = 0;
   }
 
   async componentDidMount() {
@@ -22,6 +23,7 @@ class News extends Component {
   fetchNews = async (query = this.state.query, page = this.state.page) => {
     const normalizedQuery = query.trim();
     const currentPage = normalizedQuery ? page : page || 1;
+    const requestId = ++this.activeRequestId;
 
     this.setState({ loading: true });
 
@@ -33,14 +35,24 @@ class News extends Component {
 
     const data = await fetch(url);
     const parsedData = await data.json();
+    if (requestId !== this.activeRequestId) return;
 
     const cleanedArticles =
       parsedData.articles?.filter(
         (article) => article && article.title && article.url
       ) || [];
 
+    const filteredArticles = normalizedQuery
+      ? cleanedArticles.filter((article) => {
+          const searchableText = `${article.title || ""} ${
+            article.description || ""
+          }`.toLowerCase();
+          return searchableText.includes(normalizedQuery.toLowerCase());
+        })
+      : cleanedArticles;
+
     this.setState({
-      articles: cleanedArticles,
+      articles: filteredArticles,
       totalResults: parsedData.totalResults || 0,
       loading: false,
       query: normalizedQuery,

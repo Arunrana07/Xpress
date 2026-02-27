@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Navbar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState("");
+  const firstRender = useRef(true);
 
   const handleSearch = () => {
-    if (!searchQuery.trim()) {
-      alert("Please enter a search term!");
+    onSearch(searchQuery.trim());
+  };
+
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
       return;
     }
-    onSearch(searchQuery); // send query to parent
-  };
+
+    const timeoutId = setTimeout(() => {
+      onSearch(searchQuery.trim());
+    }, 350);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery, onSearch]);
 
   return (
     <nav className="navbar bg-dark navbar-expand-lg">
@@ -46,7 +56,12 @@ function Navbar({ onSearch }) {
             placeholder="Search news..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                handleSearch();
+              }
+            }}
           />
           <button className="btn btn-primary" onClick={handleSearch}>
             Search
