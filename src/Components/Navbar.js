@@ -85,7 +85,7 @@ function Navbar({ onSearch, countries = [], selectedCountry, onCountryChange }) 
               ))}
             </select>
           </li>
-        </ul>
+        </ul> 
 
         {/* Search bar */}
         <div className="d-flex align-items-center flex-grow-1 ms-1">
